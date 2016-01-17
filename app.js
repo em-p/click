@@ -38,6 +38,6 @@ app.get("/home/", function(req,res){
 var api_groups = require('./routes/api_index');
 
 
-app.listen(1337, function(){
+app.listen(80, function(){
   console.log("server running on port 1337");
 })

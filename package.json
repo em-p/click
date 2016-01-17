@@ -6,6 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "body-parser": "~1.14.2",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "knex": "^0.9.0",
+    "mysql": "^2.10.2"
+  },
   "author": "Emlyn Mileaf-Patel",
   "license": "MIT"
 }
