@@ -4,11 +4,13 @@ var app = express();
 var bodyParser = require('body-parser');
 
 
-app.set("view engine", "jade");
+app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, 'views'));
 
 app.use(bodyParser());
+
+app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req,res){
   res.json({
@@ -38,6 +40,6 @@ app.get("/home/", function(req,res){
 var api_groups = require('./routes/api_index');
 
 
-app.listen(80, function(){
+app.listen(process.env.PORT || '3000', function(){
   console.log("server running on port 1337");
 })
