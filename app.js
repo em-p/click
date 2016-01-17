@@ -2,8 +2,9 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var bodyParser = require('body-parser');
+var engine = require('ejs-locals');
 
-
+app.engine('ejs', engine);
 app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, 'views'));
